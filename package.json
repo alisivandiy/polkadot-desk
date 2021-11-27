@@ -1,0 +1,20 @@
+{
+  "name": "dot-network",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@polkadot/api": "^6.9.2",
+    "@polkadot/keyring": "^7.9.2",
+    "@polkadot/rpc-provider": "^6.9.2",
+    "@polkadot/types": "^6.9.2",
+    "@polkadot/util": "^7.9.2",
+    "@polkadot/util-crypto": "^7.9.2",
+    "axios": "^0.24.0"
+  }
+}
