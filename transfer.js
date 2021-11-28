@@ -3,7 +3,6 @@ const { ApiPromise ,HttpProvider} = require('@polkadot/api');
 
 // Import the test keyring (already has dev keys for Alice, Bob, Charlie, Eve & Ferdie)
 const testKeyring = require('@polkadot/keyring/testing');
-console.log(testKeyring);
 // Utility function for random values
 const { randomAsU8a } = require('@polkadot/util-crypto');
 
