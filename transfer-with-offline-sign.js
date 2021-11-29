@@ -50,10 +50,13 @@ class FinalTest {
         : unsignedDetail.data;
     console.log(`address ${Alice.address} unsigned:${hashed}`);
 
+    // For the Substrate signatures (MultiSiginature type) it is always 65/66 bytes in length. The first byte is always 00, 01 or 02, (00 = ed25519, 01 = sr25519, 02 = ecdsa),
     // Sign And Make ed25519 Signature
     let sigVal = Alice.sign(hashed);
     let newVal = new Uint8Array(sigVal.byteLength + 1);
-    newVal[0] = 0x0;
+    let firstByte = 0x0 // for ed25519 Type
+
+    newVal[0] = firstByte;
     newVal.set(sigVal, 1);
 
     // Create Signature Data For Add in The Transaction
